@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent  {
+
+  constructor(public app: AppComponent)
+  {
+    this.app.isloggedin = true;
+  }
 
 }

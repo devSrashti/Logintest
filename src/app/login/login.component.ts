@@ -16,11 +16,14 @@ export class LoginComponent {
   email:string ='';
   password:string ='';
 
-  constructor(private router: Router, private route: ActivatedRoute, public app: AppComponent) {}
+  constructor(private router: Router, private route: ActivatedRoute, public app: AppComponent) 
+  {
+    this.app.isloggedin = false;  
+  }
 
   onclicklogin(){
   if(this.email == 'sara321@gmail.com' && this.password == '123@sara'){
-  this.app.isloggedin = true;  
+  
   // localStorage.setItem('isloggedin','true');
   this.router.navigate(['/home']);
 
