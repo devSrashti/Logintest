@@ -1,0 +1,13 @@
+input.red-btn {
+    filter: invert(1);
+}
+input.grren-btn {
+    filter: hue-rotate(306deg);
+}
+input.purple-btn {
+    filter: hue-rotate(88deg);
+}
+
+.sr-h-500{
+    height: 500px;
+}

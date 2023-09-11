@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -13,22 +12,21 @@ import { AppComponent } from '../app.component';
 
 export class LoginComponent {
 
-  email:string ='';
-  password:string ='';
+
+  email ='';
+  password ='';
 
   constructor(private router: Router, private route: ActivatedRoute, public app: AppComponent) 
   {
     this.app.isloggedin = false;  
   }
 
-  onclicklogin(){
+   onclicklogin(){
   if(this.email == 'sara321@gmail.com' && this.password == '123@sara'){
   
   // localStorage.setItem('isloggedin','true');
   this.router.navigate(['/home']);
-
-
-
+  
   }
 
   }
@@ -36,3 +34,6 @@ export class LoginComponent {
   
 
 }
+
+
+

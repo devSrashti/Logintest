@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productlist',
@@ -15,7 +15,7 @@ export class ProductlistComponent {
    constructor(private router:Router) {
     
     for (let index = 0; index < 55; index++) {
-      this.productList.push('productname');
+      this.productList.push({ id: index});
       
     }
 

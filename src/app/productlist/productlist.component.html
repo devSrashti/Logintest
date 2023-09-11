@@ -2,16 +2,19 @@
 
 
   
-    <div *ngFor="let product of productList" class="col-12 col-sm-6 col-md-4 col-lg-3 sr-product-section " (click)="onClickproduct()">
-        
+    <div *ngFor="let product of productList" class="col-12 col-sm-6 col-md-4 col-lg-3 sr-product-section " >
+        <div (click)="onClickproduct()" [(tabindex)]="product.id" (keypress)="onClickproduct()">
         <div class="text-center">
-            <img src="/assets/beg.jpg" class="w-100 w-md-75" height="200px">
+            <img src="/assets/beg.jpg" alt="beg"   class="w-100 w-md-75" height="200px">
         </div>
         <h4>Office Beg</h4>
         <span>♥</span>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <button class="btn btn-primary">Add to Cart</button>
-
+    </div>
+    <div>
+        <button class="btn btn-primary" [(tabindex)]="product.id">Add to Cart</button>
+        <input type="number"name="quantity" class="float-end py-1 rounded" [(tabindex)]="product.id" min="1" max="10">
+    </div>
     
     </div>
 
